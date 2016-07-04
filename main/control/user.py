@@ -236,7 +236,7 @@ def user_reset(token=None):
 ###############################################################################
 # User Activate
 ###############################################################################
-class UserActivateForm(wtf.Form):
+class UserActivateForm(flask_wtf.Form):
   name = wtforms.StringField(
     model.User.name._verbose_name,
     [wtforms.validators.required()], filters=[util.strip_filter],
